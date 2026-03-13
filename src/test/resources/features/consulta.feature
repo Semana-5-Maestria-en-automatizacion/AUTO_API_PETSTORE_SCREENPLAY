@@ -27,7 +27,7 @@ Feature: Gestión de Pets
   Scenario Outline: Actualizar nombre y estado de una mascota
     Given el servicio Petstore está disponible
     And existe una mascota con id <id>
-    When el usuario envía POST /pet/<id> con name y status
+    When el usuario envía PUT /pet y el pet con id <id> existe
     Then el sistema devuelve código <codigo>
 
     Examples:

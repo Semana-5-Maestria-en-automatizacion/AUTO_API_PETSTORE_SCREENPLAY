@@ -6,7 +6,7 @@
 |---|---|---|
 | Carga de un nuevo Pet | `POST` | `/pet` |
 | Obtener una mascota existente | `GET` | `/pet/{id}` |
-| Actualizar nombre y estado de una mascota | `POST` | `/pet/{id}` (form data) |
+| Actualizar nombre y estado de una mascota | `PUT` | `/pet/{id}` (form data) |
 | Eliminar una mascota existente | `DELETE` | `/pet/{id}` |
 
 ---

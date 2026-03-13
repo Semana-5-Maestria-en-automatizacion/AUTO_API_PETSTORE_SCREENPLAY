@@ -63,14 +63,18 @@ public class GestionDePetsStepDefinition {
         actor.attemptsTo(ObtenerMascotaPorId.conId(String.valueOf(id)));
     }
 
-    @When("^el usuario envía POST /pet/(\\d+) con name y status$")
-    public void usuario_envia_post_pet_con_name_y_status(Integer id) {
-        String url = com.petstore.util.Constantes.URL_PETSTORE + "/pet/" + id;
-        net.serenitybdd.rest.SerenityRest.given()
-                .contentType("application/x-www-form-urlencoded")
-                .formParam("name", "nuevo-nombre")
-                .formParam("status", "sold")
-                .post(url);
+    @When("^el usuario envía PUT /pet y el pet con id (\\d+) existe$")
+    public void usuario_envia_put_pet_y_el_pet_existe(Integer id) {
+        Actor actor = OnStage.theActorInTheSpotlight();
+        @SuppressWarnings("unchecked")
+        Map<String, Object> pet = (Map<String, Object>) actor.recall("petBody");
+        if (pet == null) {
+            pet = new HashMap<>();
+        }
+        pet.put("id", id);
+        pet.put("name", "nuevo-nombre");
+        pet.put("status", "sold");
+        actor.attemptsTo(LlamarApi.requestConCuerpo("PUT", "/pet", pet));
     }
 
     @When("^el usuario envía DELETE /pet/(\\d+)$")

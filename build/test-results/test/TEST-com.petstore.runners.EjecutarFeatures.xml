@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.petstore.runners.EjecutarFeatures" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-11T03:42:29.142Z" hostname="G-NOOTBOOK" time="13.464">
+<testsuite name="com.petstore.runners.EjecutarFeatures" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-13T21:19:05.431Z" hostname="G-NOOTBOOK" time="12.664">
   <properties/>
-  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="6.378"/>
-  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="2.032"/>
-  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="1.291"/>
-  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="1.284"/>
+  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="5.619"/>
+  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="2.008"/>
+  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="1.28"/>
+  <testcase name="Example #1.1" classname="com.petstore.runners.EjecutarFeatures" time="1.305"/>
   <system-out><![CDATA[
 Scenario Outline: Carga de un nuevo Pet      ?[90m# features/consulta.feature:14?[0m
   ?[32mGiven ?[0m?[32mel servicio Petstore está disponible?[0m ?[90m# com.petstore.stepdefinitions.GestionDePetsStepDefinition.servicio_disponible()?[0m
@@ -22,7 +22,7 @@ Scenario Outline: Obtener una mascota existente     ?[90m# features/consulta.fea
 Scenario Outline: Actualizar nombre y estado de una mascota ?[90m# features/consulta.feature:35?[0m
   ?[32mGiven ?[0m?[32mel servicio Petstore está disponible?[0m                ?[90m# com.petstore.stepdefinitions.GestionDePetsStepDefinition.servicio_disponible()?[0m
   ?[32mAnd ?[0m?[32mexiste una mascota con id ?[0m?[32m?[1m1?[0m                           ?[90m# com.petstore.stepdefinitions.GestionDePetsStepDefinition.existe_mascota_con_id(java.lang.Integer)?[0m
-  ?[32mWhen ?[0m?[32mel usuario envía POST /pet/?[0m?[32m?[1m1?[0m?[32m con name y status?[0m       ?[90m# com.petstore.stepdefinitions.GestionDePetsStepDefinition.usuario_envia_post_pet_con_name_y_status(java.lang.Integer)?[0m
+  ?[32mWhen ?[0m?[32mel usuario envía PUT /pet y el pet con id ?[0m?[32m?[1m1?[0m?[32m existe?[0m   ?[90m# com.petstore.stepdefinitions.GestionDePetsStepDefinition.usuario_envia_put_pet_y_el_pet_existe(java.lang.Integer)?[0m
   ?[32mThen ?[0m?[32mel sistema devuelve código ?[0m?[32m?[1m200?[0m                       ?[90m# com.petstore.stepdefinitions.GestionDePetsStepDefinition.sistema_devuelve_codigo(java.lang.Integer)?[0m
 
 Scenario Outline: Eliminar una mascota existente ?[90m# features/consulta.feature:46?[0m
@@ -38,7 +38,7 @@ SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
 SLF4J(W): Ignoring binding found at [jar:file:/C:/Users/gabip/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.10/f69d97ef3335c6ab82fc21dfb77ac613f90c1221/logback-classic-1.2.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
-mar. 11, 2026 12:42:30 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:06 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.dynamic.loading.ClassInjector$UsingJna$Dispatcher$Windows32BitFunctionMapper'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -166,7 +166,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.FunctionMapper
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:30 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:06 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.dynamic.loading.ClassInjector$UsingJna$Dispatcher$Jvm'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -294,7 +294,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Library
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaWindowsEnvironment$WindowsLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -422,7 +422,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.win32.StdCallLibrary
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaWindowsEnvironment$WindowsLibrary$SecurityAttributes'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -550,7 +550,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Structure
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaPosixEnvironment$PosixLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -678,7 +678,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Library
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaPosixEnvironment$PosixLibrary$SemaphoreOperation'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -806,7 +806,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Structure
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaWindowsNamedPipe$WindowsLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -934,7 +934,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.win32.StdCallLibrary
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaWindowsNamedPipe$WindowsAttachLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1062,7 +1062,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.win32.StdCallLibrary
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaSolarisDoor$SolarisLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1190,7 +1190,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Library
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaSolarisDoor$SolarisLibrary$DoorArgument'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1318,7 +1318,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Structure
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaPosixSocket$PosixLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1446,7 +1446,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Library
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaPosixSocket$PosixLibrary$SocketAddress'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1574,7 +1574,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Structure
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
+mar. 13, 2026 6:19:07 P. M. io.cucumber.core.resource.ClasspathScanner safelyLoadClass
 ADVERTENCIA: Failed to load class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaPosixSocket$Factory$MacLibrary'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1702,7 +1702,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Library
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 111 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.java.MethodScanner safelyGetMethods
+mar. 13, 2026 6:19:07 P. M. io.cucumber.java.MethodScanner safelyGetMethods
 ADVERTENCIA: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaWindowsEnvironment'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1814,7 +1814,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.platform.win32.Win32Exc
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 95 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.java.MethodScanner safelyGetMethods
+mar. 13, 2026 6:19:07 P. M. io.cucumber.java.MethodScanner safelyGetMethods
 ADVERTENCIA: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForOpenJ9$Dispatcher$ForJnaPosixEnvironment'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -1926,7 +1926,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.LastErrorException
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 95 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.java.MethodScanner safelyGetMethods
+mar. 13, 2026 6:19:07 P. M. io.cucumber.java.MethodScanner safelyGetMethods
 ADVERTENCIA: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaWindowsNamedPipe'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -2038,7 +2038,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.platform.win32.Win32Exc
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 95 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.java.MethodScanner safelyGetMethods
+mar. 13, 2026 6:19:07 P. M. io.cucumber.java.MethodScanner safelyGetMethods
 ADVERTENCIA: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaWindowsNamedPipe$Factory'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -2150,7 +2150,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.platform.win32.Win32Exc
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 95 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.java.MethodScanner safelyGetMethods
+mar. 13, 2026 6:19:07 P. M. io.cucumber.java.MethodScanner safelyGetMethods
 ADVERTENCIA: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaSolarisDoor'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.
@@ -2262,7 +2262,7 @@ Caused by: java.lang.ClassNotFoundException: com.sun.jna.Pointer
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
 	... 95 more
 
-mar. 11, 2026 12:42:31 A. M. io.cucumber.java.MethodScanner safelyGetMethods
+mar. 13, 2026 6:19:07 P. M. io.cucumber.java.MethodScanner safelyGetMethods
 ADVERTENCIA: Failed to load methods of class 'net.bytebuddy.agent.VirtualMachine$ForHotSpot$Connection$ForJnaPosixSocket$Factory'.
 By default Cucumber scans the entire classpath for step definitions.
 You can restrict this by configuring the glue path.

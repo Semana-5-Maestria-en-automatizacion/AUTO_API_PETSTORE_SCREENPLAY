@@ -147,7 +147,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-03-2026 00:42</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-03-2026 18:19</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -247,7 +247,7 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Given el servicio Petstore está disponible<br>And existe una mascota con id &lt;id&gt;<br>When el usuario envía POST /pet/&lt;id&gt; con name y status<br>Then el sistema devuelve código &lt;codigo&gt;</div>
+        <div class="scenario">Given el servicio Petstore está disponible<br>And existe una mascota con id &lt;id&gt;<br>When el usuario envía PUT /pet y el pet con id &lt;id&gt; existe<br>Then el sistema devuelve código &lt;codigo&gt;</div>
 
     </div>
 
@@ -326,7 +326,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">1s 285ms</span></td>
+                    <td width="100"><span class="top-level-step">1s 275ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -378,7 +378,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">783ms</span></td>
+                    <td width="100"><span class="nested-step">780ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -408,7 +408,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">772ms</span></td>
+                    <td width="100"><span class="nested-step">769ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -438,7 +438,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">760ms</span></td>
+                    <td width="100"><span class="nested-step">759ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -479,7 +479,7 @@
                                     <h4>Content Body</h4>
                                     <pre>{<br>    &quot;name&quot;: &quot;mascota-1&quot;,<br>    &quot;id&quot;: 1,<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Date: Wed, 11 Mar 2026 03:42:39 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                    <pre>Date: Fri, 13 Mar 2026 21:19:12 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
                                 <h4>Response Body</h4>
                                     <pre>{<br>    &quot;id&quot;: 1,<br>    &quot;name&quot;: &quot;mascota-1&quot;,<br>    &quot;photoUrls&quot;: [<br>        <br>    ],<br>    &quot;tags&quot;: [<br>        <br>    ],<br>    &quot;status&quot;: &quot;available&quot;<br>}</pre>
                                     <h4>Response Cookies</h4>
@@ -494,7 +494,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">001ms</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
 
                             </table>
@@ -524,7 +524,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                When el usuario envía POST /pet/1 con name y status
+                                                When el usuario envía PUT /pet y el pet con id 1 existe
                                         </span>
                             </a>
                             <span class="evidence">
@@ -533,7 +533,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">484ms</span></td>
+                    <td width="100"><span class="nested-step">477ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -542,7 +542,37 @@
 
                     <td width="90" class="step-icon">
                         <a name="0-2-0"></a>
-                            <span style="margin-left: 60px;"
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-2-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Cliente llamar api
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">469ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-2-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-2-0-0"></a>
+                            <span style="margin-left: 80px;"
                                   class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
@@ -550,31 +580,33 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                POST https://petstore.swagger.io/v2/pet/1
+                                                PUT https://petstore.swagger.io/v2/pet
                                         </span>
                             <span class="evidence">
                                         <span class="piece-of-evidence">
                 <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-8">
+                                data-target="#restModal-REST-9">
                             REST Query
                         </button>
                     </span>
                 <!-- Modal -->
                 <div class="rest-query-details">
-                    <div class="collapse multi-collapse" id="restModal-REST-8">
+                    <div class="collapse multi-collapse" id="restModal-REST-9">
                         <div class="card">
                             <div class="card-body">
                                 <h4>Response</h4>
-                                    <p>URL: https://petstore.swagger.io/v2/pet/1</p>
+                                    <p>URL: https://petstore.swagger.io/v2/pet</p>
                                     <p>Status code: 200</p>
-                                    <p>Content Type: application/x-www-form-urlencoded</p>
+                                    <p>Content Type: application/json</p>
                                     <h4>Request Headers</h4>
-                                    <pre>Accept=*/*<br>Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1</pre>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;name&quot;: &quot;nuevo-nombre&quot;,<br>    &quot;id&quot;: 1,<br>    &quot;status&quot;: &quot;sold&quot;<br>}</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Date: Wed, 11 Mar 2026 03:42:40 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
+                                    <pre>Date: Fri, 13 Mar 2026 21:19:12 GMT<br>Content-Type: application/json<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Methods: GET, POST, DELETE, PUT<br>Access-Control-Allow-Headers: Content-Type, api_key, Authorization<br>Server: Jetty(9.2.9.v20150224)</pre>
                                 <h4>Response Body</h4>
-                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;type&quot;: &quot;unknown&quot;,<br>    &quot;message&quot;: &quot;1&quot;<br>}</pre>
+                                    <pre>{<br>    &quot;id&quot;: 1,<br>    &quot;name&quot;: &quot;nuevo-nombre&quot;,<br>    &quot;photoUrls&quot;: [<br>        <br>    ],<br>    &quot;tags&quot;: [<br>        <br>    ],<br>    &quot;status&quot;: &quot;sold&quot;<br>}</pre>
                                     <h4>Response Cookies</h4>
                                     <pre></pre>
                             </div>
@@ -589,6 +621,10 @@
                     <td width="130"><span class="nested-group-step">SUCCESS</span></td>
                     <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
+
+                            </table>
+                        </td>
+                    </tr>
 
                             </table>
                         </td>
@@ -622,7 +658,7 @@
             <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>1.29s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>1.28s</em></span></td>
             </tr>
 
         </table>
